@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_team11/image_detail_page.dart';
-import 'home_page.dart'; // TODO moshi_deatail_pageに飛ぶようにする
+import 'moshi_detail_page.dart';
 
 class PictureCard extends StatelessWidget {
 
@@ -16,7 +15,7 @@ class PictureCard extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return ImageDetailPage();
+          return MoshiDetailPage();
         }));
       },
       child: SizedBox(

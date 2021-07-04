@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_team11/image_detail_page.dart';
+import 'package:flutter_team11/moshi_detail_page.dart';
 import 'package:flutter_team11/welcome_page.dart';
 import 'picture_card.dart';
 import 'register_data_page.dart';
@@ -153,10 +153,8 @@ class _HomePageState extends State<HomePage> {
                       isFirst = false;
                     });
                     Navigator.push(context, MaterialPageRoute(builder: (context) {
-                      return RegisterDataPage();
+                      return MoshiDetailPage();
                     }));
-                    // TODO デバック用
-                    // TODO 遷移
                   },
                   minWidth: 200.0,
                   height: 42.0,
@@ -178,7 +176,7 @@ class _HomePageState extends State<HomePage> {
                   onTap: () {
                     // TODO 遷移
                     Navigator.push(context, MaterialPageRoute(builder: (context) {
-                      return ImageDetailPage();
+                      return MoshiDetailPage();
                     }));
                   },
                   child: Container(
