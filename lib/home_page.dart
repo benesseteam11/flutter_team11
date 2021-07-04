@@ -216,7 +216,7 @@ class _HomePageState extends State<HomePage> {
                           children: <Widget>[
                             SizedBox(
                               height: 200.0,
-                              child: Image.asset('assets/newGraph.png'),
+                              child: Image.asset('assets/graph1.png'),
                             ),
                             // テストのイメージを追加
                             Text(
