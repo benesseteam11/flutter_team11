@@ -82,7 +82,7 @@ class RegisterDataPage extends StatelessWidget {
                       elevation: 5.0,
                       child: MaterialButton(
                         onPressed: () {
-                          // TODO: 遷移
+                          Navigator.pop(context);
                         },
                         minWidth: 200.0,
                         height: 42.0,

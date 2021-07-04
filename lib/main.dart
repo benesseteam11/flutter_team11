@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'login_page.dart';
 import 'welcome_page.dart';
 import 'home_page.dart';
+import 'image_detail_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -33,6 +34,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return LoginPage();
+    return WelcomePage();
   }
 }

@@ -11,6 +11,15 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: AppBar(
+        leading: IconButton(
+          onPressed: () => Navigator.of(context).pop(),
+          color: Colors.black,
+          icon: Icon(Icons.arrow_back),
+        ),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+      ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
@@ -54,6 +63,7 @@ class _LoginPageState extends State<LoginPage> {
               onChanged: (value) {
                 //Do something with the user input.
               },
+              obscureText: true,
               decoration: InputDecoration(
                 hintText: 'Enter your password.',
                 contentPadding:

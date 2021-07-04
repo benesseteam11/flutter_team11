@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_team11/image_detail_page.dart';
+import 'package:flutter_team11/welcome_page.dart';
 import 'picture_card.dart';
+import 'register_data_page.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -39,7 +42,19 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: Text('Flutter Team11'),
+        actions: <Widget>[
+          IconButton(
+          icon: Icon(Icons.logout),
+          onPressed: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (_) => WelcomePage(),
+              ),
+            );
+          },
+        ),]
       ),
       body: isFirst ? Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -57,10 +72,11 @@ class _HomePageState extends State<HomePage> {
                   onPressed: () {
                     setState(() {
                       isFirst = !isFirst;
-                      continueDate = (continueDate + 1) % 7;
                     });
-                    // TODO デバック用
-                    // TODO 遷移
+                    Navigator.push(context, MaterialPageRoute(builder: (context) {
+                      return RegisterDataPage();
+                    }));
+
                   },
                   minWidth: 200.0,
                   height: 42.0,
@@ -82,7 +98,7 @@ class _HomePageState extends State<HomePage> {
                 onTap: () {
                   // TODO 遷移
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return HomePage();
+                    return RegisterDataPage();
                   }));
                 },
                 child: Container(
@@ -134,9 +150,11 @@ class _HomePageState extends State<HomePage> {
                 child: MaterialButton(
                   onPressed: () {
                     setState(() {
-                      isFirst = !isFirst;
-                      continueDate = (continueDate + 1) % 7;
+                      isFirst = false;
                     });
+                    Navigator.push(context, MaterialPageRoute(builder: (context) {
+                      return RegisterDataPage();
+                    }));
                     // TODO デバック用
                     // TODO 遷移
                   },
@@ -160,7 +178,7 @@ class _HomePageState extends State<HomePage> {
                   onTap: () {
                     // TODO 遷移
                     Navigator.push(context, MaterialPageRoute(builder: (context) {
-                      return HomePage();
+                      return ImageDetailPage();
                     }));
                   },
                   child: Container(
