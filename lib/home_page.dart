@@ -43,7 +43,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: Text('Flutter Team11'),
+        title: Text('模試の1週間坊主アプリ'),
         actions: <Widget>[
           IconButton(
           icon: Icon(Icons.logout),
@@ -96,7 +96,6 @@ class _HomePageState extends State<HomePage> {
               padding: EdgeInsets.all(10.0),
               child: GestureDetector(
                 onTap: () {
-                  // TODO 遷移
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
                     return RegisterDataPage();
                   }));

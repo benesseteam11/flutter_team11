@@ -5,7 +5,7 @@ class RegisterDataPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flutter Team11'),
+        title: Text('模試の1週間坊主アプリ'),
       ),
       body: SafeArea(
         child: ListView(
