@@ -34,7 +34,7 @@ class _HomePageState extends State<HomePage> {
     'これからも努力を続けていきましょう！',
   ];
 
-  int continueDate = 0;
+  int continueDate = 4;
 
   bool isFirst = true;
 
@@ -214,7 +214,10 @@ class _HomePageState extends State<HomePage> {
                         Column(
                           mainAxisSize: MainAxisSize.max,
                           children: <Widget>[
-                            Image.asset('assets/benesse.jpeg'),
+                            SizedBox(
+                              height: 200.0,
+                              child: Image.asset('assets/newGraph.png'),
+                            ),
                             // テストのイメージを追加
                             Text(
                               '進研模試',
@@ -243,10 +246,12 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           Expanded(
-            child: Text(
-              '最近のデータ',
-              style: TextStyle(
-                fontSize: 24.0,
+            child: Center(
+              child: Text(
+                '最近のデータ',
+                style: TextStyle(
+                  fontSize: 24.0,
+                ),
               ),
             ),
           ),
